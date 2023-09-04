@@ -1,7 +1,17 @@
 <h1>Interpolation</h1>
 <p>Hello, {{ user.name }} {{ user.age }} tuổi</p>
+<ng-template [ngIf]="user.age <= 30" [ngIfELse]="old">
+  <p>Duy Young</p>
+</ng-template>
+<p *ngIf = "user.age > 30">Duy old</p>
 <h1>Property Binding</h1>
 <p [style] = "danger" [style.font-size.px]="normal">Old</p>
 <p [style] = "warning" [style.font-size.px]="small" >Young</p>
 <h1>Event Binding</h1>
 <button (click)="increaseAge()">Increase age of Duy</button>
+<button (click)="decreaseAge()">Decrease age of Duy</button>
+<hr>
+<h1>List User</h1>
+<p *ngFor="let user of listUsers">
+  Username: {{ user.email }} - Password: {{ user.password}}
+</p>

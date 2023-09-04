@@ -6,6 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./day3.component.scss']
 })
 export class Day3Component {
+  // ngFor
+  listUsers = [
+    {
+      email: 'user1@gmail.com',
+      password: '123'
+    },
+    {
+      email: 'user2@gmail.com',
+      password: '123'
+    },
+    {
+      email: 'user3@gmail.com',
+      password: '123'
+    }
+  ]
   // One-way binding
     // Interpolation => get data from component to show on UI
     user = {
@@ -26,6 +41,8 @@ export class Day3Component {
       this.user.age += 1;
     }
 
-
+    decreaseAge() {
+      this.user.age -= 1;
+    }
   // Two-way binding = property binding + event binding
 }
